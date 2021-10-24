@@ -1,0 +1,384 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'open sans';
+}
+
+.contenido {
+    padding: 60px 0;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.titulo {
+    color: #0082c8;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+/* Header */
+
+header {
+    width: 100%;
+    height: 600px;
+    background: #667db6;
+    background: -webkit-linear-gradient(to right, hsla(223, 35%, 56%, 0.700), hsla(201, 100%, 39%, 0.700), hsla(201, 100%, 39%, 0.700), hsla(223, 35%, 56%, 0.700)), url(../img/colonia.jpg);
+    background: linear-gradient(to right, hsla(223, 35%, 56%, 0.700), hsla(201, 100%, 39%, 0.700), hsla(201, 100%, 39%, 0.700), hsla(223, 35%, 56%, 0.700)), url(../img/colonia.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+nav{
+    text-align: right;
+    padding: 30px 50px 0 0;
+}
+
+nav > a{
+    color:#fff;
+    font-weight: 300;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+nav > a:hover{
+    text-decoration: underline;
+}
+
+header .textos-encabezado{
+    display: flex;
+    height: 430px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.textos-encabezado h1{
+    font-size: 50px;
+    color:#fff;
+}
+
+.textos-encabezado h2{
+    font-size: 30px;
+    font-weight: 300;
+    color:#fff;
+}
+
+.onda{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Historia*/
+main historia{
+    padding: 30px 0 60px 0;
+}
+.contenido-historia{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.imagen-historia{
+    width: 48%;
+}
+
+.historia .texto{
+    width: 48%;
+}
+
+.texto h3 {
+    margin-bottom: 15px;
+}
+
+.texto h3 span {
+    background: #667db6;
+    color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    padding: 2px;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+    margin-right: 5px;
+}
+
+.texto p {
+    padding: 0px 0px 30px 15px;
+    font-weight: 300;
+    text-align: justify;
+}
+/*Sabias que*/
+.sabias-que{
+    background: #E6F5F7;
+}
+
+.listas {
+    width:700px;
+    margin: 0 auto;
+}
+
+.listas ol {
+    counter-reset: li; 
+    list-style: none; 
+    *list-style: decimal; 
+    font: 15px 'open sans';
+}
+
+.listas li {
+    font-weight: 300;
+    text-align: justify;
+    position: relative;
+    display: block;
+    padding: .4em .4em .4em 2em;
+    *padding: .4em;
+    margin: .5em 0;
+    background: #ddd;
+    text-decoration: none;
+    border-radius: .3em;
+    
+}
+
+.listas li:before {
+    content: counter(li);
+    counter-increment: li;
+    position: absolute;
+    left: -1.3em;
+    top: 50%;
+    margin-top: -1.3em;
+    background: #87ceeb;
+    height: 2em;
+    width: 2em;
+    line-height: 2em;
+    border: .3em solid #fff;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 2em;
+}
+/*Por que ir*/
+.img-porqueir {
+    margin-top: 20px;
+    margin-bottom: 70px;
+    width: 1000px;
+    height: 500px;
+}
+
+/*Que visitar*/
+.que-visitar {
+    background: #E6F5F7;
+}
+
+.visitas{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.opcion-visitas{
+    width: 28%;
+    text-align: center;
+}
+
+.opcion-visitas img{
+    width: 90%;
+}
+
+.opcion-visitas h3{
+    margin: 10px 0;
+}
+
+.opcion-visitas p{
+    font-weight: 300;
+    text-align: justify;
+}
+
+/*Donde alojarse*/
+.galeria-colonia{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.imagen-colonia{
+    width: 24%;
+    margin-bottom: 10px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+}
+
+.imagen-colonia > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.flotar-galeria{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    transform: scale(0);
+    background: rgba(8, 171, 192, 0.794);
+    transition: transform .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.flotar-galeria img{
+    width: 50px;
+}
+
+.flotar-galeria p{
+    color: #fff;
+}
+
+.imagen-colonia:hover .flotar-galeria{
+    transform: scale(1);
+}
+
+/*Como llegar*/
+.como-llegar {
+    background: #E6F5F7;
+}
+
+.llegar p{
+    width: 55%;
+    height: 100%;
+    font-weight: 300;
+    text-align: justify;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.llegar ul {
+    list-style-type: disc;
+    margin-left: 75px;
+    margin-bottom: 25px;
+}
+
+.llegar img {
+    float: right;
+    margin-right: 15px;
+    width: 400px;
+}
+
+/*Festivales */
+.cards{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.cards .card{
+    background: #667db6;
+    display: flex;
+    width: 46%;
+    height: 200px;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 5px;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.6);
+    margin-bottom: 25px;
+}
+
+.cards .card img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    display: block;
+}
+
+.cards .card > .contenido-texto-card{
+    width: 60%;
+    color: #fff;
+}
+
+.cards .card > .contenido-texto-card p{
+    font-weight: 300;
+    text-align: justify;
+    padding-top: 5px;
+}
+
+/*Tours*/
+.excursiones{
+    background: #E6F5F7;
+}
+
+.tours {
+    background: #f2f2f2;
+    display: flex;
+    width: 100%;
+    height: 200px;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 5px;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.6);
+    margin-bottom: 30px;
+}
+
+.tours p {
+    font-weight: 300;
+    text-align: justify;
+    margin-left: 15px;
+    width: 90%;
+    margin-top: 15px;
+}
+
+.tours h4{
+    margin-left: 15px
+}
+
+.tours img {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    
+}
+
+/*Mapa*/
+.maps {
+    margin-left: 100px;
+}
+
+
+/* footer */
+
+footer{
+    background: #0082c8;
+    padding: 60px 0 30px 0;
+    margin: auto;
+    overflow: hidden;
+}
+
+.contenedor-footer{
+    display: flex;
+    width: 90%;
+    justify-content: space-evenly;
+    margin: auto;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #fff;
+}
+
+.titulo-final{
+    text-align: center;
+    font-size: 24px;
+    margin: 20px 0 0 0;
+    color: #fff;
+}
